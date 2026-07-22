@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.work-sans{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 to 900;
+  font-style: normal;
+}
+
+
+
+@keyframes pulse404 {
+  0%, 100% { transform: scale(1); fill: #52395b; }
+  50% { transform: scale(1.02); fill: #5a4065; }
+}
+
+@keyframes floatScene {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes tailSwing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-6deg); }
+  50% { transform: rotate(4deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes handSwing {
+  0%, 100% { transform: rotate(0deg); }
+  33% { transform: rotate(-5deg); }
+  66% { transform: rotate(3deg); }
+}
+
+@keyframes glitchFade {
+  0%, 100% { opacity: 1; letter-spacing: 0; }
+  50% { opacity: 0.85; letter-spacing: 1px; }
+}
+
+.animate-float-scene {
+  animation: floatScene 6s ease-in-out infinite;
+}
+
+.animate-tail-swing {
+  transform-origin: 350px 272px;
+  animation: tailSwing 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-hand-swing {
+  transform-origin: 180px 272px;
+  animation: handSwing 5s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+}
+
+.animate-glitch {
+  animation: glitchFade 3s ease-in-out infinite;
+}
+
+.animate-pulse-404 {
+  animation: pulse404 3s ease-in-out infinite;
+}
